@@ -57,6 +57,32 @@ dependencyResolutionManagement {
 </code></pre>
 
 <p><strong>Tip:</strong> Siempre puedes consultar la última versión disponible en <a href="https://jitpack.io/#King-Navi/SoundNest_LibraryAndroid" target="_blank">JitPack.io</a>.</p>
+
+<h2>🛠 Cómo importar en IntelliJ IDEA</h2>
+
+<p>Este proyecto está basado en Gradle (usa <code>build.gradle.kts</code> y <code>settings.gradle.kts</code>), por lo que IntelliJ IDEA puede importarlo automáticamente.</p>
+
+<h3>Pasos:</h3>
+
+<ol>
+  <li>Abre <strong>IntelliJ IDEA</strong>.</li>
+  <li>En la pantalla principal, haz clic en <strong>Open</strong> (Abrir).</li>
+  <li>Navega a la carpeta raíz del proyecto (donde está el archivo <code>build.gradle.kts</code>).</li>
+  <li>Selecciona la carpeta y presiona <strong>OK</strong>.</li>
+  <li>IntelliJ detectará automáticamente que es un proyecto Gradle y preguntará si quieres importar. Acepta.</li>
+  <li>Espera a que finalice la sincronización e indexación (puede tardar unos minutos la primera vez).</li>
+</ol>
+
+<p>✅ ¡Y ya podrás trabajar normalmente!</p>
+
+<h3>Tip adicional:</h3>
+<p>Si quieres que Gradle se sincronice automáticamente cada vez que hagas cambios en archivos <code>.gradle.kts</code>, puedes habilitarlo así:</p>
+
+<ol>
+  <li>Ve a <strong>File &gt; Settings &gt; Build, Execution, Deployment &gt; Build Tools &gt; Gradle</strong>.</li>
+  <li>Activa la opción <strong>"Auto-import"</strong> o <strong>"Reload project on changes in build scripts"</strong>.</li>
+</ol>
+
 <h2>🚀 Uso básico</h2>
 
 <pre><code>import soundNest.auth.LoginClient
