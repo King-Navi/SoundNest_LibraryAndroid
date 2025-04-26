@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package soundnest;
+
+service FileUploader {
+  // Subida completa de un archivo en una sola llamada
+  rpc UploadMp3(Mp3UploadRequest) returns (UploadResponse);
+
+  // Subida en streaming (opcional si es un archivo grande)
+  rpc StreamUploadMp3(stream Mp3Chunk) returns (UploadResponse);
+}
+
+message Mp3UploadRequest {
+  string filename = 1;
+  bytes content = 2; // Contenido binario del mp3
+}
+
+message Mp3Chunk {
+  string filename = 1;
+  bytes chunk_data = 2; // Parte del archivo en bytes
+}
+
+message UploadResponse {
+  bool success = 1;
+  string message = 2;
+}
