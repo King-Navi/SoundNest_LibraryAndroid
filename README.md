@@ -83,6 +83,62 @@ dependencyResolutionManagement {
   <li>Activa la opción <strong>"Auto-import"</strong> o <strong>"Reload project on changes in build scripts"</strong>.</li>
 </ol>
 
+
+<h2>🏷️ Cómo crear y publicar una nueva versión (Tag)</h2>
+
+<p>Cuando hagas cambios importantes en la librería y quieras liberar una nueva versión para que esté disponible en JitPack, debes crear un <strong>Tag</strong> en Git.</p>
+
+<h3>Pasos para crear y subir un nuevo Tag:</h3>
+
+<ol>
+  <li>Guarda y haz commit de tus cambios:</li>
+</ol>
+
+<pre><code>git add .
+git commit -m "Descripción de los cambios"
+git push origin main
+</code></pre>
+
+<ol start="2">
+  <li>Crea un nuevo tag siguiendo la convención <a href="https://semver.org/" target="_blank">Semantic Versioning (SemVer)</a>:</li>
+</ol>
+
+<pre><code>git tag v0.0.7-Alpha
+</code></pre>
+
+<ol start="3">
+  <li>Sube el tag al repositorio remoto:</li>
+</ol>
+
+<pre><code>git push origin v0.0.7-Alpha
+</code></pre>
+
+<ol start="4">
+  <li>Espera unos minutos y verifica en <a href="https://jitpack.io" target="_blank">JitPack.io</a> que la nueva versión esté publicada con <strong>Status: Success</strong>.</li>
+</ol>
+
+<p><strong>¡Listo!</strong> Tu nueva versión estará disponible para que los proyectos Android la consuman.</p>
+
+<h3>📖 ¿Qué es Semantic Versioning (SemVer)?</h3>
+
+<p>Usamos la convención de versiones semánticas (<a href="https://semver.org/" target="_blank">SemVer</a>) para mantener orden y claridad en los cambios del proyecto.</p>
+
+<ul>
+  <li><strong>vMAJOR.MINOR.PATCH</strong> (por ejemplo <code>v1.2.3</code>).</li>
+  <li><strong>MAJOR</strong>: Se incrementa cuando haces cambios incompatibles en la API.</li>
+  <li><strong>MINOR</strong>: Se incrementa cuando agregas funcionalidades compatibles.</li>
+  <li><strong>PATCH</strong>: Se incrementa para correcciones de errores menores o pequeños cambios compatibles.</li>
+</ul>
+
+<p>Ejemplos:</p>
+
+<ul>
+  <li><code>v1.0.0</code>: Primera versión estable.</li>
+  <li><code>v1.1.0</code>: Se agregó una nueva funcionalidad (compatible).</li>
+  <li><code>v1.1.1</code>: Se corrigió un error menor.</li>
+  <li><code>v2.0.0</code>: Cambio mayor que rompe compatibilidad.</li>
+</ul>
+
 <h2>🚀 Uso básico</h2>
 
 <pre><code>import soundNest.auth.LoginClient
