@@ -1,4 +1,4 @@
-package soundNest.utils
+package communication.restful.utils
 import okhttp3.OkHttpClient
 
 import java.security.SecureRandom

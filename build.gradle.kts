@@ -7,16 +7,18 @@ plugins {
 }
 
 group = "com.soundnest"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-Alpha"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi:1.13.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
     implementation("io.grpc:grpc-kotlin-stub:1.4.1")
     implementation("io.grpc:grpc-netty-shaded:1.63.0")
@@ -59,10 +61,11 @@ publishing {
     repositories {
         maven {
             name = "local"
-            url = uri(layout.buildDirectory.dir("repo")) // Se guarda localmente
+            url = uri(layout.buildDirectory.dir("repo"))
         }
     }
 }
+
 tasks.test {
     useJUnitPlatform()
 }
