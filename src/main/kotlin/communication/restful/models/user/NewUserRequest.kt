@@ -20,12 +20,6 @@ data class NewUserRequest(
 )
 
 data class AdditionalInformation(
-    @Json(name = "bio")
-    val bio: String,
-
-    @Json(name = "instagram")
-    val instagram: String,
-
-    @Json(name = "genres")
-    val genres: List<String>
+    @Json(name = "info")
+    val info: List<String>
 )
