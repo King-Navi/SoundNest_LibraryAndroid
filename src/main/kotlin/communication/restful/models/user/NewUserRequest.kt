@@ -13,7 +13,7 @@ data class NewUserRequest(
     val password: String,
 
     @Json(name = "code")
-    val code: Int,
+    val code: String,
 
     @Json(name = "additionalInformation")
     val additionalInformation: AdditionalInformation
